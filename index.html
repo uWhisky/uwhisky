@@ -3,10 +3,10 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this.t.bind(this),this.touchStartHandler=this.i.bind(this),this.touchMoveHandler=this.o.bind(this),this.touchEndHandler=this.h.bind(this),this.clickHandler=this.u.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this.l(this),window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.everythingLoaded&&this.m()})),document.addEventListener("DOMContentLoaded",(()=>{this.p()})),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}k(t){document.hidden?t.t():(this.triggerEvents.forEach((e=>window.addEventListener(e,t.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",t.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",t.touchStartHandler),document.addEventListener("visibilitychange",t.userEventHandler))}_(){this.triggerEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}i(t){"HTML"!==t.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),t.target.addEventListener("click",this.clickHandler),this.L(t.target,!0),this.M(t.target,"onclick","rocket-onclick"),this.C())}o(t){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.O()}h(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}u(t){t.target.removeEventListener("click",this.clickHandler),this.L(t.target,!1),this.M(t.target,"rocket-onclick","onclick"),this.interceptedClicks.push(t),t.preventDefault(),t.stopPropagation(),t.stopImmediatePropagation(),this.O()}D(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((t=>{t.target.dispatchEvent(new MouseEvent("click",{view:t.view,bubbles:!0,cancelable:!0}))}))}l(t){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(e,i,o){"click"!==e||t.windowLoaded||i===t.clickHandler||t.interceptedClickListeners.push({target:this,func:i,options:o}),(this||window).addEventListenerBase(e,i,o)}}L(t,e){this.interceptedClickListeners.forEach((i=>{i.target===t&&(e?t.removeEventListener("click",i.func,i.options):t.addEventListener("click",i.func,i.options))})),t.parentNode!==document.documentElement&&this.L(t.parentNode,e)}S(){return new Promise((t=>{this.T?this.O=t:t()}))}C(){this.T=!0}O(){this.T=!1}M(t,e,i){t.hasAttribute&&t.hasAttribute(e)&&(event.target.setAttribute(i,event.target.getAttribute(e)),event.target.removeAttribute(e))}t(){this._(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this.R.bind(this)):this.R()}p(){let t=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{const o=new URL(i.html).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.j(t,"preconnect")}async R(){this.lastBreath=Date.now(),this.P(this),this.F(this),this.q(),this.A(),this.I(),await this.U(this.delayedScripts.normal),await this.U(this.delayedScripts.defer),await this.U(this.delayedScripts.async);try{await this.W(),await this.H(this),await this.J()}catch(t){console.error(t)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.S().then((()=>{this.D()})),this.N()}A(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async B(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.indexOf("Firefox/index.html")>0||""===navigator.vendor)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),i.hasAttribute("src")?(i.addEventListener("load",o),i.addEventListener("error",(function(){i.setAttribute("data-rocket-status","failed"),e()})),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),n=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o),t.addEventListener("error",(function(){t.setAttribute("data-rocket-status","failed"),e()})),n?(t.removeAttribute("data-rocket-src"),t.src=n):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed"),e()}}));t.setAttribute("data-rocket-status","skipped")}async U(t){const e=t.shift();return e&&e.isConnected?(await this.B(e),this.U(t)):Promise.resolve()}I(){this.j([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}j(t,e){var i=document.createDocumentFragment();t.forEach((t=>{const o=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(o){const n=document.createElement("link");n.href=o,n.rel=e,"preconnect"!==e&&(n.as="script"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),i.appendChild(n),this.trash.push(n)}})),document.head.appendChild(i)}P(t){let e={};function i(i,o){return e[o].eventsToRewrite.indexOf(i)>=0&&!t.everythingLoaded?"rocket-"+i:i}function o(t,o){!function(t){e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=i(arguments[0],t),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(o)}function n(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o||function(){},set(n){t.everythingLoaded?o=n:e["rocket"+i]=o=n}})}o(document,"DOMContentLoaded"),o(window,"DOMContentLoaded"),o(window,"load"),o(window,"pageshow"),o(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}F(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||0===t.indexOf("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){if(o&&o.fn&&!t.allJQueries.includes(o)){o.fn.ready=o.fn.init.prototype.ready=function(e){return t.domReadyFired?e.bind(document)(o):document.addEventListener("rocket-DOMContentLoaded",(()=>e.bind(document)(o))),o([])};const e=o.fn.on;o.fn.on=o.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),e.apply(this,arguments),this},t.allJQueries.push(o)}e=o}o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}async H(t){const e=document.querySelector("script[data-webpack]");e&&(await async function(){return new Promise((t=>{e.addEventListener("load",t),e.addEventListener("error",t)}))}(),await t.K(),await t.H(t))}async W(){this.domReadyFired=!0,await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async J(){await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}m(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}q(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+e);const o=document.createRange(),n=i.parentElement;let s=t.get(i);void 0===s&&(s=i.nextSibling,t.set(i,s));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),n.insertBefore(c,s)}}async G(){Date.now()-this.lastBreath>45&&(await this.K(),this.lastBreath=Date.now())}async K(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}N(){this.trash.forEach((t=>t.remove()))}static run(){const t=new RocketLazyLoadScripts;t.k(t)}}RocketLazyLoadScripts.run()})();</script>
 	
-			<title>Arleson Moreira &#8211; Advogado Criminalista &#8211; Escritório de Advocacia Criminal especializado em crimes como tráfico de drogas, tráfico de armas, organizações criminosas, entre outros.</title>
+			<title>Arleson Alves &#8211; Advogado Criminalista &#8211; Escritório de Advocacia Criminal especializado em crimes como tráfico de drogas, tráfico de armas, organizações criminosas, entre outros.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name='robots' content='max-image-preview:large' />
-<title>Arleson Moreira &#8211; Advogado Criminalista &#8211; Escritório de Advocacia Criminal especializado em crimes como tráfico de drogas, tráfico de armas, organizações criminosas, entre outros.</title>
+<title>Arleson Alves &#8211; Advogado Criminalista &#8211; Escritório de Advocacia Criminal especializado em crimes como tráfico de drogas, tráfico de armas, organizações criminosas, entre outros.</title>
 <link rel="alternate" type="application/rss+xml" title="Feed para Thaisa Palla - Advogada Criminalista &raquo;" href="feed/index.html" />
 <link rel="alternate" type="application/rss+xml" title="Feed de comentários para Thaisa Palla - Advogada Criminalista &raquo;" href="comments/feed/index.html" />
 <script type="rocketlazyloadscript">
@@ -166,10 +166,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @font-face{font-family:Cardo;font-style:italic;font-weight:400;font-display:fallback;src:url('wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_italic_400.woff2') format('woff2');}
 @font-face{font-family:Cardo;font-style:normal;font-weight:700;font-display:fallback;src:url('wp-content/themes/twentytwentyfour/assets/fonts/cardo/cardo_normal_700.woff2') format('woff2');}
 </style>
-<link rel="icon" href="wp-content/uploads/2024/05/favicon-150x150.webp" sizes="32x32" />
-<link rel="icon" href="wp-content/uploads/2024/05/favicon-300x300.webp" sizes="192x192" />
-<link rel="apple-touch-icon" href="wp-content/uploads/2024/05/favicon-300x300.webp" />
-<meta name="msapplication-TileImage" content="https://thaisapalla.com.br/wp-content/uploads/2024/05/favicon-300x300.webp" />
+<link rel="icon" href="wp-content/uploads/2024/05/logoarleson.png" sizes="32x32" />
+<link rel="icon" href="wp-content/uploads/2024/05/logoarleson.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="wp-content/uploads/2024/05/logoarleson.png" />
+<meta name="msapplication-TileImage" content="https://thaisapalla.com.br/wp-content/uploads/2024/05/logoarleson.png" />
 <noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /><style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
 <noscript>
 <style id="wpr-lazyload-bg-nostyle">.elementor-10 .elementor-element.elementor-element-53d63a7::before, .elementor-10 .elementor-element.elementor-element-53d63a7 > .elementor-background-video-container::before, .elementor-10 .elementor-element.elementor-element-53d63a7 > .e-con-inner > .elementor-background-video-container::before, .elementor-10 .elementor-element.elementor-element-53d63a7 > .elementor-background-slideshow::before, .elementor-10 .elementor-element.elementor-element-53d63a7 > .e-con-inner > .elementor-background-slideshow::before, .elementor-10 .elementor-element.elementor-element-53d63a7 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{--wpr-bg-4943faf3-9d2c-4290-b5a9-7200e1f53548: url('wp-content/uploads/2024/05/Dobra-1-v5-Thaisa.webp');}.elementor-10 .elementor-element.elementor-element-53d63a7::before, .elementor-10 .elementor-element.elementor-element-53d63a7 > .elementor-background-video-container::before, .elementor-10 .elementor-element.elementor-element-53d63a7 > .e-con-inner > .elementor-background-video-container::before, .elementor-10 .elementor-element.elementor-element-53d63a7 > .elementor-background-slideshow::before, .elementor-10 .elementor-element.elementor-element-53d63a7 > .e-con-inner > .elementor-background-slideshow::before, .elementor-10 .elementor-element.elementor-element-53d63a7 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{--wpr-bg-d602bf58-db94-4c61-af3c-996bf6112188: url('wp-content/uploads/2024/05/mobile-sessao-1.webp');}.rll-youtube-player .play{--wpr-bg-1e5123c0-e109-472d-badf-7b1e16d6d6fa: url('wp-content/plugins/wp-rocket/assets/img/youtube.png');}</style>
@@ -185,7 +185,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-199035d elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-position-top elementor-widget elementor-widget-image-box" data-id="199035d" data-element_type="widget" data-widget_type="image-box.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img fetchpriority="high" decoding="async" width="572" height="204" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20572%20204'%3E%3C/svg%3E" class="attachment-large size-large wp-image-20" alt="" data-lazy-srcset="logoarleson.webp 572w, logoarleson.webp 300w" data-lazy-sizes="(max-width: 572px) 100vw, 572px" data-lazy-src="logoarleson.webp" /><noscript><img fetchpriority="high" decoding="async" width="572" height="204" src="logoarleson.webp" class="attachment-large size-large wp-image-20" alt="" srcset="logoarleson.webp 572w, logoarleson.webp 300w" sizes="(max-width: 572px) 100vw, 572px" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Arleson Moreira, Advogado Criminalista</h3><p class="elementor-image-box-description">Escritório de Advocacia Criminal especializado em crimes como tráfico de drogas, tráfico de armas, organizações criminosas, maria da penha, entre outros.</p></div></div>				</div>
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img fetchpriority="high" decoding="async" width="572" height="204" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20572%20204'%3E%3C/svg%3E" class="attachment-large size-large wp-image-20" alt="" data-lazy-srcset="logoarleson.webp 572w, logoarleson.webp 300w" data-lazy-sizes="(max-width: 572px) 100vw, 572px" data-lazy-src="logoarleson.webp" /><noscript><img fetchpriority="high" decoding="async" width="572" height="204" src="logoarleson.webp" class="attachment-large size-large wp-image-20" alt="" srcset="logoarleson.webp 572w, logoarleson.webp 300w" sizes="(max-width: 572px) 100vw, 572px" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Arleson Alves, Advogado Criminalista</h3><p class="elementor-image-box-description">Escritório de Advocacia Criminal especializado em crimes como tráfico de drogas, tráfico de armas, organizações criminosas, maria da penha, entre outros.</p></div></div>				</div>
 				</div>
 				<div class="elementor-element elementor-element-c3935f5 elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="c3935f5" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
@@ -283,7 +283,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-9070c04 elementor-position-top elementor-widget elementor-widget-image-box" data-id="9070c04" data-element_type="widget" data-widget_type="image-box.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="64" height="64" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3C/svg%3E" class="attachment-full size-full wp-image-134" alt="" data-lazy-src="wp-content/uploads/2024/05/martelo.webp" /><noscript><img loading="lazy" decoding="async" width="64" height="64" src="wp-content/uploads/2024/05/martelo.webp" class="attachment-full size-full wp-image-134" alt="" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Execução penal</h3></div></div>				</div>
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="64" height="64" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3C/svg%3E" class="attachment-full size-full wp-image-134" alt="" data-lazy-src="wp-content/uploads/2024/05/martelo.webp" /><noscript><img loading="lazy" decoding="async" width="64" height="64" src="wp-content/uploads/2024/05/martelo.webp" class="attachment-full size-full wp-image-134" alt="" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Execução Penal</h3></div></div>				</div>
 				</div>
 					</div>
 				</div>
@@ -374,26 +374,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											</div>
 		</div>
 								</div>
-											<div class="swiper-slide" role="group" aria-roledescription="slide">
-									<div class="elementor-testimonial">
-							<div class="elementor-testimonial__content">
-					<div class="elementor-testimonial__text">
-								<div data-elementor-type="page" data-elementor-id="152" class="elementor elementor-152" data-elementor-settings="{&quot;ha_cmc_init_switcher&quot;:&quot;no&quot;}" data-elementor-post-type="elementor_library">
-				<div class="elementor-element elementor-element-4b5c2fe e-flex e-con-boxed e-con e-parent" data-id="4b5c2fe" data-element_type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-9070c04 elementor-position-top elementor-widget elementor-widget-image-box" data-id="9070c04" data-element_type="widget" data-widget_type="image-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="56" height="56" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2056%2056'%3E%3C/svg%3E" class="attachment-full size-full wp-image-154" alt="" data-lazy-src="wp-content/uploads/2024/05/money.webp" /><noscript><img loading="lazy" decoding="async" width="56" height="56" src="wp-content/uploads/2024/05/money.webp" class="attachment-full size-full wp-image-154" alt="" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Capitais</h3></div></div>				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-							</div>
-									</div>
-						<div class="elementor-testimonial__footer">
-											</div>
-		</div>
-								</div>
+
 											<div class="swiper-slide" role="group" aria-roledescription="slide">
 									<div class="elementor-testimonial">
 							<div class="elementor-testimonial__content">
@@ -434,26 +415,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											</div>
 		</div>
 								</div>
-											<div class="swiper-slide" role="group" aria-roledescription="slide">
-									<div class="elementor-testimonial">
-							<div class="elementor-testimonial__content">
-					<div class="elementor-testimonial__text">
-								<div data-elementor-type="page" data-elementor-id="164" class="elementor elementor-164" data-elementor-settings="{&quot;ha_cmc_init_switcher&quot;:&quot;no&quot;}" data-elementor-post-type="elementor_library">
-				<div class="elementor-element elementor-element-4b5c2fe e-flex e-con-boxed e-con e-parent" data-id="4b5c2fe" data-element_type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-9070c04 elementor-position-top elementor-widget elementor-widget-image-box" data-id="9070c04" data-element_type="widget" data-widget_type="image-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="59" height="59" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2059%2059'%3E%3C/svg%3E" class="attachment-full size-full wp-image-166" alt="" data-lazy-src="wp-content/uploads/2024/05/colarinho-branco.webp" /><noscript><img loading="lazy" decoding="async" width="59" height="59" src="wp-content/uploads/2024/05/colarinho-branco.webp" class="attachment-full size-full wp-image-166" alt="" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Crimes do <br>Colarinho Branco</h3></div></div>				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-							</div>
-									</div>
-						<div class="elementor-testimonial__footer">
-											</div>
-		</div>
-								</div>
+
 											<div class="swiper-slide" role="group" aria-roledescription="slide">
 									<div class="elementor-testimonial">
 							<div class="elementor-testimonial__content">
@@ -534,26 +496,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											</div>
 		</div>
 								</div>
-											<div class="swiper-slide" role="group" aria-roledescription="slide">
-									<div class="elementor-testimonial">
-							<div class="elementor-testimonial__content">
-					<div class="elementor-testimonial__text">
-								<div data-elementor-type="page" data-elementor-id="666" class="elementor elementor-666" data-elementor-settings="{&quot;ha_cmc_init_switcher&quot;:&quot;no&quot;}" data-elementor-post-type="elementor_library">
-				<div class="elementor-element elementor-element-4b5c2fe e-flex e-con-boxed e-con e-parent" data-id="4b5c2fe" data-element_type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-9070c04 elementor-position-top elementor-widget elementor-widget-image-box" data-id="9070c04" data-element_type="widget" data-widget_type="image-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="188" height="188" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20188%20188'%3E%3C/svg%3E" class="attachment-full size-full wp-image-667" alt="" data-lazy-srcset="https://thaisapalla.com.br/wp-content/uploads/2024/07/audience_1.webp 188w, https://thaisapalla.com.br/wp-content/uploads/2024/07/audience_1-150x150.webp 150w" data-lazy-sizes="(max-width: 188px) 100vw, 188px" data-lazy-src="wp-content/uploads/2024/07/audience_1.webp" /><noscript><img loading="lazy" decoding="async" width="188" height="188" src="wp-content/uploads/2024/07/audience_1.webp" class="attachment-full size-full wp-image-667" alt="" srcset="https://thaisapalla.com.br/wp-content/uploads/2024/07/audience_1.webp 188w, https://thaisapalla.com.br/wp-content/uploads/2024/07/audience_1-150x150.webp 150w" sizes="(max-width: 188px) 100vw, 188px" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Audiência de Custódia</h3></div></div>				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-							</div>
-									</div>
-						<div class="elementor-testimonial__footer">
-											</div>
-		</div>
-								</div>
+
 											<div class="swiper-slide" role="group" aria-roledescription="slide">
 									<div class="elementor-testimonial">
 							<div class="elementor-testimonial__content">
@@ -724,26 +667,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											</div>
 		</div>
 								</div>
-											<div class="swiper-slide" role="group" aria-roledescription="slide">
-									<div class="elementor-testimonial">
-							<div class="elementor-testimonial__content">
-					<div class="elementor-testimonial__text">
-								<div data-elementor-type="page" data-elementor-id="152" class="elementor elementor-152" data-elementor-settings="{&quot;ha_cmc_init_switcher&quot;:&quot;no&quot;}" data-elementor-post-type="elementor_library">
-				<div class="elementor-element elementor-element-4b5c2fe e-flex e-con-boxed e-con e-parent" data-id="4b5c2fe" data-element_type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-9070c04 elementor-position-top elementor-widget elementor-widget-image-box" data-id="9070c04" data-element_type="widget" data-widget_type="image-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="56" height="56" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2056%2056'%3E%3C/svg%3E" class="attachment-full size-full wp-image-154" alt="" data-lazy-src="wp-content/uploads/2024/05/money.webp" /><noscript><img loading="lazy" decoding="async" width="56" height="56" src="wp-content/uploads/2024/05/money.webp" class="attachment-full size-full wp-image-154" alt="" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Capitais</h3></div></div>				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-							</div>
-									</div>
-						<div class="elementor-testimonial__footer">
-											</div>
-		</div>
-								</div>
+
 											<div class="swiper-slide" role="group" aria-roledescription="slide">
 									<div class="elementor-testimonial">
 							<div class="elementor-testimonial__content">
@@ -784,26 +708,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											</div>
 		</div>
 								</div>
-											<div class="swiper-slide" role="group" aria-roledescription="slide">
-									<div class="elementor-testimonial">
-							<div class="elementor-testimonial__content">
-					<div class="elementor-testimonial__text">
-								<div data-elementor-type="page" data-elementor-id="164" class="elementor elementor-164" data-elementor-settings="{&quot;ha_cmc_init_switcher&quot;:&quot;no&quot;}" data-elementor-post-type="elementor_library">
-				<div class="elementor-element elementor-element-4b5c2fe e-flex e-con-boxed e-con e-parent" data-id="4b5c2fe" data-element_type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-9070c04 elementor-position-top elementor-widget elementor-widget-image-box" data-id="9070c04" data-element_type="widget" data-widget_type="image-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="59" height="59" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2059%2059'%3E%3C/svg%3E" class="attachment-full size-full wp-image-166" alt="" data-lazy-src="wp-content/uploads/2024/05/colarinho-branco.webp" /><noscript><img loading="lazy" decoding="async" width="59" height="59" src="wp-content/uploads/2024/05/colarinho-branco.webp" class="attachment-full size-full wp-image-166" alt="" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Crimes do <br>Colarinho Branco</h3></div></div>				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-							</div>
-									</div>
-						<div class="elementor-testimonial__footer">
-											</div>
-		</div>
-								</div>
+
 											<div class="swiper-slide" role="group" aria-roledescription="slide">
 									<div class="elementor-testimonial">
 							<div class="elementor-testimonial__content">
@@ -884,26 +789,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 											</div>
 		</div>
 								</div>
-											<div class="swiper-slide" role="group" aria-roledescription="slide">
-									<div class="elementor-testimonial">
-							<div class="elementor-testimonial__content">
-					<div class="elementor-testimonial__text">
-								<div data-elementor-type="page" data-elementor-id="666" class="elementor elementor-666" data-elementor-settings="{&quot;ha_cmc_init_switcher&quot;:&quot;no&quot;}" data-elementor-post-type="elementor_library">
-				<div class="elementor-element elementor-element-4b5c2fe e-flex e-con-boxed e-con e-parent" data-id="4b5c2fe" data-element_type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-9070c04 elementor-position-top elementor-widget elementor-widget-image-box" data-id="9070c04" data-element_type="widget" data-widget_type="image-box.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img decoding="async" width="188" height="188" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20188%20188'%3E%3C/svg%3E" class="attachment-full size-full wp-image-667" alt="" data-lazy-srcset="https://thaisapalla.com.br/wp-content/uploads/2024/07/audience_1.webp 188w, https://thaisapalla.com.br/wp-content/uploads/2024/07/audience_1-150x150.webp 150w" data-lazy-sizes="(max-width: 188px) 100vw, 188px" data-lazy-src="wp-content/uploads/2024/07/audience_1.webp" /><noscript><img loading="lazy" decoding="async" width="188" height="188" src="wp-content/uploads/2024/07/audience_1.webp" class="attachment-full size-full wp-image-667" alt="" srcset="https://thaisapalla.com.br/wp-content/uploads/2024/07/audience_1.webp 188w, https://thaisapalla.com.br/wp-content/uploads/2024/07/audience_1-150x150.webp 150w" sizes="(max-width: 188px) 100vw, 188px" /></noscript></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Audiência de Custódia</h3></div></div>				</div>
-				</div>
-					</div>
-				</div>
-				</div>
-							</div>
-									</div>
-						<div class="elementor-testimonial__footer">
-											</div>
-		</div>
-								</div>
+
 											<div class="swiper-slide" role="group" aria-roledescription="slide">
 									<div class="elementor-testimonial">
 							<div class="elementor-testimonial__content">
@@ -947,7 +833,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-de7e117 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-image-box" data-id="de7e117" data-element_type="widget" data-widget_type="image-box.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Você está enfrentando um <span class='color'>processo criminal </span>e precisa de ajuda?</h3><p class="elementor-image-box-description">Se você está enfrentando um processo criminal, envolvendo questões relacionadas ao tráfico de drogas, tráfico de armas, associações criminosas ou outros crimes da área, é crucial contar com a assistência de uma advogada especializada nessa área de atuação.</p></div></div>				</div>
+					<div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Você está enfrentando um processo criminal </span>e precisa de ajuda?</h3><p class="elementor-image-box-description">Se você está sendo acusado de crimes graves, como tráfico de drogas, tráfico de armas, envolvimento com organizações criminosas ou outros delitos relacionados ao direito penal, é fundamental ter ao seu lado um advogado especializado. Com experiência nessas questões, podemos oferecer uma defesa estratégica e personalizada, analisando cada detalhe do seu caso e buscando as melhores alternativas legais para proteger seus direitos e assegurar o melhor resultado possível.</p></div></div>				</div>
 				</div>
 				<div class="elementor-element elementor-element-55d2e13 elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="55d2e13" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
@@ -1000,7 +886,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="elementor-element elementor-element-ab13c38 elementor-widget elementor-widget-text-editor" data-id="ab13c38" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									<p>Sua localidade não é uma limitação! Atendemos clientes em todo o país, proporcionando comodidade e acessibilidade a todos que buscam nossa assistência jurídica especializada.</p>								</div>
+									<p>Nossa atuação não conhece fronteiras! Estamos preparados para oferecer serviços jurídicos especializados para clientes em todo o Brasil, independentemente da localização. Com um compromisso constante com a excelência, buscamos proporcionar a todos a conveniência e o acesso à assistência jurídica de qualidade, levando em consideração as necessidades específicas de cada caso. Nossa experiência e dedicação garantem que você receba o melhor suporte, onde quer que esteja, com a confiança e a segurança que só um advogado especializado pode oferecer.</p>								</div>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-5e314b1 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="5e314b1" data-element_type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
@@ -1032,7 +918,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="elementor-element elementor-element-344611e elementor-widget elementor-widget-text-editor" data-id="344611e" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									<p>Aqui no escritório, cuidamos de cada caso de forma totalmente personalizado, trazendo mais segurança, conforto e credibilidade aos nossos clientes.</p>								</div>
+									<p>No nosso escritório, cada caso é tratado de maneira única e personalizada, visando sempre proporcionar aos nossos clientes a maior segurança, conforto e confiança. Com uma abordagem dedicada e atenciosa, buscamos entender profundamente as necessidades de cada cliente, oferecendo soluções jurídicas que tragam tranquilidade e garantam a credibilidade que você merece.</p>								</div>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-c4480d0 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="c4480d0" data-element_type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
@@ -1064,7 +950,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="elementor-element elementor-element-2eb519f elementor-widget elementor-widget-text-editor" data-id="2eb519f" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									<p>Para nós, cada cliente é valorizado como indivíduo único. Nosso compromisso exclusivo é defender vigorosamente seus direitos e trabalhar incansavelmente pela sua liberdade.</p>								</div>
+									<p>Aqui, cada cliente é tratado como uma pessoa única e especial. Nosso compromisso é proteger seus direitos com determinação e empenho, buscando sempre a melhor defesa e trabalhando incansavelmente para garantir sua liberdade. Nos dedicamos totalmente a cada caso, oferecendo a atenção e o respeito que você merece.</p>								</div>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-580e888 e-con-full elementor-hidden-desktop elementor-hidden-tablet e-flex e-con e-child" data-id="580e888" data-element_type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
@@ -1096,7 +982,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="elementor-element elementor-element-6029101 elementor-widget elementor-widget-text-editor" data-id="6029101" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									<p>Sua localidade não é uma limitação! Atendemos clientes em todo o país, proporcionando comodidade e acessibilidade a todos que buscam nossa assistência jurídica especializada.</p>								</div>
+									<p>Nossa atuação não conhece fronteiras! Estamos preparados para oferecer serviços jurídicos especializados para clientes em todo o Brasil, independentemente da localização. Com um compromisso constante com a excelência, buscamos proporcionar a todos a conveniência e o acesso à assistência jurídica de qualidade, levando em consideração as necessidades específicas de cada caso. Nossa experiência e dedicação garantem que você receba o melhor suporte, onde quer que esteja, com a confiança e a segurança que só um advogado especializado pode oferecer.</p>								</div>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-097c2cf elementor-hidden-desktop elementor-hidden-tablet e-flex e-con-boxed e-con e-child" data-id="097c2cf" data-element_type="container" data-settings="{&quot;_ha_eqh_enable&quot;:false}">
@@ -1133,7 +1019,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-c902df6 elementor-widget elementor-widget-text-editor" data-id="c902df6" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									<p>Aqui no escritório, cuidamos de cada caso de forma totalmente personalizado, trazendo mais segurança, conforto e credibilidade aos nossos clientes.</p>								</div>
+									<p>No nosso escritório, cada caso é tratado de maneira única e personalizada, visando sempre proporcionar aos nossos clientes a maior segurança, conforto e confiança. Com uma abordagem dedicada e atenciosa, buscamos entender profundamente as necessidades de cada cliente, oferecendo soluções jurídicas que tragam tranquilidade e garantam a credibilidade que você merece.</p>								</div>
 				</div>
 					</div>
 				</div>
@@ -1167,7 +1053,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="elementor-element elementor-element-be76237 elementor-widget elementor-widget-text-editor" data-id="be76237" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									<p>Para nós, cada cliente é valorizado como indivíduo único. Nosso compromisso exclusivo é defender vigorosamente seus direitos e trabalhar incansavelmente pela sua liberdade.</p>								</div>
+									<p>Aqui, cada cliente é tratado como uma pessoa única e especial. Nosso compromisso é proteger seus direitos com determinação e empenho, buscando sempre a melhor defesa e trabalhando incansavelmente para garantir sua liberdade. Nos dedicamos totalmente a cada caso, oferecendo a atenção e o respeito que você merece.</p>								</div>
 				</div>
 					</div>
 				</div>
@@ -1184,14 +1070,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="elementor-element elementor-element-970f730 elementor-widget elementor-widget-image-box" data-id="970f730" data-element_type="widget" data-widget_type="image-box.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Quem vai te atender</h3><p class="elementor-image-box-description">Me chamo Thaisa Arleson e sou Advogado Criminalista especialista em crimes de tráfico de drogas, tráfico de armas, associações criminosas, entre outros… 
+					<div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Quem vai te atender</h3><p class="elementor-image-box-description">Me chamo Arleson Alves e sou Advogado Criminalista especialista em crimes de tráfico de drogas, tráfico de armas, associações criminosas, entre outros… 
 <br><br>
 Ao longo da minha trajetória profissional, tenho me dedicado a casos desafiadores e muito complexos. A minha missão é garantir uma defesa robusta e eficaz em todas as etapas do seu processo criminal, lhe assegurando que os seus direitos e garantias sejam respeitados em todas as instâncias.</p></div></div>				</div>
 				</div>
 				<div class="elementor-element elementor-element-5f401b2 elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="5f401b2" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://wa.me/5593991129494" target="_blank">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://wa.me/3199303660" target="_blank">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-icon">
 				<svg aria-hidden="true" class="e-font-icon-svg e-fab-whatsapp" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>			</span>
@@ -1217,7 +1103,7 @@ Ao longo da minha trajetória profissional, tenho me dedicado a casos desafiador
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-631a714 elementor-widget elementor-widget-image-box" data-id="631a714" data-element_type="widget" data-widget_type="image-box.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Quem vai te atender</h3><p class="elementor-image-box-description">Me chamo Arleson Moreira e sou Advogado Criminalista especialista em crimes de tráfico de drogas, tráfico de armas, associações criminosas, entre outros… 
+					<div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Quem vai te atender</h3><p class="elementor-image-box-description">Me chamo Arleson Alves e sou Advogado Criminalista especialista em crimes de tráfico de drogas, tráfico de armas, associações criminosas, entre outros… 
 <br><br>
 Ao longo da minha trajetória profissional, tenho me dedicado a casos desafiadores e muito complexos. A minha missão é garantir uma defesa robusta e eficaz em todas as etapas do seu processo criminal, lhe assegurando que os seus direitos e garantias sejam respeitados em todas as instâncias.</p></div></div>				</div>
 				</div>
