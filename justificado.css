@@ -1,0 +1,14 @@
+/* Estilo para desktop e telas maiores */
+.texto-justificado {
+    text-align: justify;
+    hyphens: auto;
+    text-align-last: left;
+}
+
+/* Estilo para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .texto-justificado {
+        text-align: left;  /* Alinha o texto à esquerda em telas menores */
+        hyphens: none;     /* Desativa a quebra automática de palavras */
+    }
+}

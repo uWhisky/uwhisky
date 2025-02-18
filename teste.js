@@ -1,0 +1,1 @@
+document.getElementById("hcor").style.color = "#2045A4"
