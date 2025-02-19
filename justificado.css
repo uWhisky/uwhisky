@@ -12,3 +12,14 @@
         hyphens: none;     /* Desativa a quebra automática de palavras */
     }
 }
+
+.e-con-inner {
+    display: flex;
+    flex-wrap: wrap; /* Para garantir que quebrem linha se precisar */
+    justify-content: center; /* Para centralizar */
+    gap: 20px; /* Ajusta o espaçamento entre eles */
+}
+.elementor-testimonial {
+    flex: 1 1 250px; /* Faz os cards terem tamanho flexível */
+    max-width: 250px; /* Evita que fiquem muito grandes */
+}
