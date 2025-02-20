@@ -109,4 +109,41 @@
     }
 }
 
+/* Ajustes para a logo no dispositivo móvel */
+@media (max-width: 967px) {
+  /* Seletor específico para a logo no cabeçalho */
+  .elementor-widget-image-box img[src="logoarlesonbranca.webp"] {
+    position: fixed !important;  /* A logo ficará no topo mas será posicionado de forma absoluta */
+    top: 5% !important;  /* A posição do topo */
+    left: 77% !important;  /* Centraliza a logo */
+    transform: translateX(-50%) !important;  /* Ajuste para a centralização perfeita */
+    z-index: 9999 !important;  /* Garante que a logo fique acima dos outros elementos */
+    max-width: 120px !important;  /* Ajusta o tamanho da logo */
+  }
+
+  /* Substitua o src da logo com o novo arquivo de imagem */
+  .elementor-widget-image-box img[src="logoarlesonbranca.webp"] {
+    content: url('logoarleson.webp') !important; /* Altere o caminho para o novo arquivo */
+  }
+
+  /* Garante que o cabeçalho tenha o comportamento esperado */
+  header {
+    position: relative !important;  /* O cabeçalho precisa ter 'relative' para que a logo use 'absolute' */
+    overflow: visible !important;  /* Permite que a logo ultrapasse os limites do cabeçalho */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
