@@ -5,11 +5,12 @@
     text-align-last: left;
 }
 
-/* Estilo para dispositivos móveis */
+/* Estilo para telas menores (mobile) */
 @media screen and (max-width: 768px) {
     .texto-justificado {
-        text-align: left;  /* Alinha o texto à esquerda em telas menores */
-        hyphens: none;     /* Desativa a quebra automática de palavras */
+        text-align: justify;
+        hyphens: auto;
+        text-align-last: left;
     }
 }
 
@@ -23,3 +24,89 @@
     flex: 1 1 250px; /* Faz os cards terem tamanho flexível */
     max-width: 250px; /* Evita que fiquem muito grandes */
 }
+
+
+/* Estilo geral para desktop - somente para este widget específico */
+.elementor-element-970f730 .elementor-image-box-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .elementor-element-970f730 .elementor-image-box-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .elementor-element-970f730 .elementor-image-box-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left; /* Mantém o título alinhado à esquerda */
+  }
+  
+  .elementor-element-970f730 .elementor-image-box-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    text-align: justify; /* Justifica o texto */
+  }
+  
+  /* Estilo específico para telas menores, como mobile */
+  @media only screen and (max-width: 768px) {
+    .elementor-element-970f730 .elementor-image-box-wrapper {
+      flex-direction: column; /* Faz com que o conteúdo fique empilhado em telas pequenas */
+      text-align: center;
+    }
+  
+    .elementor-element-970f730 .elementor-image-box-title {
+      font-size: 20px; /* Ajusta o tamanho da fonte para telas menores */
+      text-align: left; /* Mantém o título alinhado à esquerda no mobile também */
+    }
+  
+    .elementor-element-970f730 .elementor-image-box-description {
+      font-size: 14px; /* Ajusta o tamanho da fonte */
+      padding: 0 10px; /* Adiciona um pouco de padding para evitar que o texto encoste nas bordas */
+      text-align: justify; /* Justifica o texto também no mobile */
+    }
+  
+    /* Caso queira esconder algo para mobile */
+    .elementor-element-970f730 .elementor-image-box-wrapper img {
+      max-width: 100%; /* Garante que a imagem não ultrapasse os limites da tela */
+    }
+  }
+  
+  /* Estilos específicos para a versão desktop (se necessário) */
+  @media only screen and (min-width: 1024px) {
+    .elementor-element-970f730 .elementor-image-box-wrapper {
+      padding: 30px;
+    }
+  
+    .elementor-element-970f730 .elementor-image-box-title {
+      font-size: 28px;
+    }
+  
+    .elementor-element-970f730 .elementor-image-box-description {
+      font-size: 18px;
+      text-align: justify; /* Justifica o texto também no desktop */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo-mobile {
+        display: block;
+        position: absolute;
+        top: 10px;  /* Mantém no topo */
+        right: 45px; /* Move mais para a esquerda, mantendo dentro da faixa branca */
+        width: 120px; /* Ajuste conforme necessário */
+        height: auto;
+    }
+
+    /* Garantir que o container do logo permita o posicionamento */
+    .elementor-image-box-wrapper {
+        position: relative;
+    }
+}
+
+
